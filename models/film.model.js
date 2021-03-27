@@ -2,7 +2,8 @@ const db = require('../utils/db');
 
 module.exports = {
   all() {
-    return db('film');
+    // return db('film');
+    return db("film");
   },
 
   async getFilmDetail(id) {
@@ -20,5 +21,21 @@ module.exports = {
 
   add(film) {
     return db('film').insert(film);
+  },
+
+  update(film_id, values) {
+    if (Object.keys(values).length === 0 && values.constructor === Object) {
+      return null;
+    }
+    try {
+      return db('film').where({film_id: film_id}).update({...values});
+    } catch (error) {
+      console.error(error)
+      return null;
+    }
+  },
+
+  delete(film_id) {
+    return db('film').delete().where({film_id: film_id});
   }
 }

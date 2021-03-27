@@ -1,0 +1,33 @@
+{
+  "required": [],
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "release_year": {
+      "type": "integer"
+    },
+    "language_id": {
+      "type": "integer"
+    },
+    "original_language_id": {
+      "type": "integer"
+    },
+    "rental_duration": {
+      "type": "integer"
+    },
+    "rental_rate": {
+      "type": "number"
+    },
+    "length": {
+      "type": "integer"
+    },
+    "replacement_cost": {
+      "type": "number"
+    }
+  }
+}
