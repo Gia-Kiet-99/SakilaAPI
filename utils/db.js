@@ -2,7 +2,7 @@ const knex = require('knex')({
   client: 'mysql2',
   connection: {
     host: '127.0.0.1',
-    user: 'root',
+    user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: 'sakila',
     port: 3306
