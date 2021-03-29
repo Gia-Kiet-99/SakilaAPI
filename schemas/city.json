@@ -11,5 +11,14 @@
     "country_id": {
       "type": "integer"
     }
-  }
+  },
+  "links": [
+    {
+      "foreign_key": "country_id",
+      "href": {
+        "schema": "country",
+        "props": "country_id"
+      }
+    }
+  ]
 }

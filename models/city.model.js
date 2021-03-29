@@ -43,5 +43,9 @@ module.exports = {
       result.message = error.toString();
     }
     return result;
+  },
+
+  delete(city_id) {
+    return db('city').delete().where({city_id: city_id});
   }
 }

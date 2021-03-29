@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 const cityModel = require('../models/city.model');
-const citySchema = require('../schemas/city.json')
-const validate = require('../middlewares/validate.mdw')
+const citySchema = require('../schemas/city.json');
+const cityUpdationSchema = require('../schemas/updation_city.json');
+const validate = require('../middlewares/validate.mdw');
 
 
 router.get('/', async (req, res) => {
@@ -33,7 +34,7 @@ router.post('/', validate(citySchema), async (req, res) => {
   }
 })
 
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', validate(cityUpdationSchema), async (req, res) => {
   const city_id = req.params.id || 0;
   const values = req.body;
 
@@ -43,6 +44,16 @@ router.patch('/:id', async (req, res) => {
   } else {
     res.status(400).json(result.message);
   }
+})
+
+router.delete('/:id', async (req, res) => {
+  const city_id = req.params.id || 0;
+  const count = await cityModel.delete(city_id);
+
+  if (count === 0) {
+    return res.status(204).end();
+  }
+  res.json(count);
 })
 
 
