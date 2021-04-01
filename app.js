@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
+require('express-async-errors');
 
 dotenv.config();
 
@@ -20,6 +21,21 @@ app.use('/api/actors', require('./routes/actor.route'));
 app.use('/api/countries', require('./routes/country.route'));
 app.use('/api/cities', require('./routes/city.route'));
 app.use('/api/categories', require('./routes/category.route'));
+
+app.get('/error', function (req, res) {
+  throw new Error("Test error");
+})
+
+app.use(function (req, res, next) {
+  res.status(404).json({
+    error_message: "Endpoint not found!"
+  });
+});
+
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).json({ message_error: "Something broke!" })
+})
 
 const PORT = 3000;
 app.listen(PORT, function () {
