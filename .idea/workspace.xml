@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ee83ddff-0ca9-477d-865a-9e4c03fe2e98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/validate.mdw.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/validate.mdw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth.mdw.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.mdw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -53,21 +66,93 @@
       <option name="presentableId" value="Default" />
       <updated>1616752943610</updated>
       <workItem from="1616752945072" duration="63000" />
-      <workItem from="1618471247338" duration="91000" />
+      <workItem from="1618471247338" duration="2293000" />
+      <workItem from="1618491411112" duration="1804000" />
+      <workItem from="1618499119317" duration="29000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="654" y="242" key="#JavaScript" timestamp="1618471337488">
+    <state x="654" y="242" key="#JavaScript" timestamp="1618471346341">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="654" y="242" key="#JavaScript/0.27.1920.1053@0.27.1920.1053" timestamp="1618471337488" />
-    <state x="970" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1616752997035">
+    <state x="654" y="242" key="#JavaScript/0.27.1920.1053@0.27.1920.1053" timestamp="1618471346341" />
+    <state x="100" y="127" width="1720" height="853" key="DiffContextDialog" timestamp="1618471813360">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="970" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1616752997035" />
+    <state x="100" y="127" width="1720" height="853" key="DiffContextDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1618471813360" />
+    <state width="1897" height="359" key="GridCell.Tab.0.bottom" timestamp="1618495785275">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="359" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1618495785275" />
+    <state width="1897" height="359" key="GridCell.Tab.0.center" timestamp="1618495785275">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="359" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1618495785275" />
+    <state width="1897" height="359" key="GridCell.Tab.0.left" timestamp="1618495785275">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="359" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1618495785275" />
+    <state width="1897" height="359" key="GridCell.Tab.0.right" timestamp="1618495785275">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="359" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1618495785275" />
+    <state x="651" y="292" width="618" height="522" key="find.popup" timestamp="1618491459754">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="651" y="292" width="618" height="522" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1618491459754" />
+    <state x="632" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1618491467701">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="632" y="226" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1618491467701" />
   </component>
 </project>

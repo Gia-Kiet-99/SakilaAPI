@@ -7,6 +7,7 @@ const authSchema = require('../schemas/auth.json')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const randomString = require('randomstring')
+const authMDW = require('../middlewares/auth.mdw')
 
 router.post('/', validate(authSchema), async (req, res) => {
   const { username, password } = req.body;
@@ -36,6 +37,29 @@ router.post('/', validate(authSchema), async (req, res) => {
     accessToken,
     refreshToken
   })
+})
+
+router.post("/refresh", authMDW, async (req, res) => {
+  const { refreshToken } = req.body;
+  const { userId } = req.accessTokenPayload;
+
+  const user = await userModel.single(userId);
+  if (!user || user.rfToken !== refreshToken) {
+    return res.status(401).json({
+      error_message: "Invalid refresh token!"
+    })
+  }
+
+  const payload = {
+    userId: user.user_id
+  };
+  const opts = {
+    expiresIn: 60 * 10
+  }
+  const accessToken = jwt.sign(payload, process.env.SECRET_KEY, opts);
+  console.log(accessToken);
+
+  res.json({accessToken});
 })
 
 module.exports = router;

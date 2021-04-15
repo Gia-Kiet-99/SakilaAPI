@@ -10,7 +10,6 @@ module.exports = {
     if (users.length > 0) {
       return users[0];
     }
-
     return null;
   },
 
