@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 require('express-async-errors');
 const cors = require('cors');
 
+const authMDW = require('./middlewares/auth.mdw');
+
 dotenv.config();
 
 const app = express();
@@ -18,12 +20,14 @@ app.get('/', function (req, res) {
   });
 })
 
-app.use('/api/films', require('./routes/film.route'));
+app.use('/api/films', authMDW, require('./routes/film.route'));
 app.use('/api/actors', require('./routes/actor.route'));
 app.use('/api/countries', require('./routes/country.route'));
 app.use('/api/cities', require('./routes/city.route'));
 app.use('/api/categories', require('./routes/category.route'));
 app.use('/api/languages', require('./routes/language.route'));
+app.use('/api/users', require('./routes/user.route'));
+app.use('/api/auth', require('./routes/auth.route'));
 
 app.get('/error', function (req, res) {
   throw new Error("Test error");

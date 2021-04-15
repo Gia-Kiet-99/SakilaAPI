@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ee83ddff-0ca9-477d-865a-9e4c03fe2e98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/film.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/film.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/validate.mdw.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/validate.mdw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/film.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/film.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +21,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616752943610</updated>
       <workItem from="1616752945072" duration="63000" />
+      <workItem from="1618471247338" duration="91000" />
     </task>
     <servers />
   </component>
@@ -43,6 +61,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="654" y="242" key="#JavaScript" timestamp="1618471337488">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="654" y="242" key="#JavaScript/0.27.1920.1053@0.27.1920.1053" timestamp="1618471337488" />
     <state x="970" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1616752997035">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
