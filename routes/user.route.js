@@ -8,10 +8,10 @@ const bcrypt = require('bcryptjs')
 
 let salt = bcrypt.genSaltSync(10);
 
-router.get("/", async (req, res) => {
-  const users = await userModel.all();
-  res.json(users);
-})
+// router.get("/", async (req, res) => {
+//   const users = await userModel.all();
+//   res.json(users);
+// })
 
 router.post("/", validate(userSchema), async (req, res) => {
   const user = req.body;

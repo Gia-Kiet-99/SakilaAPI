@@ -21,11 +21,11 @@ app.get('/', function (req, res) {
 })
 
 app.use('/api/films', authMDW, require('./routes/film.route'));
-app.use('/api/actors', require('./routes/actor.route'));
-app.use('/api/countries', require('./routes/country.route'));
-app.use('/api/cities', require('./routes/city.route'));
-app.use('/api/categories', require('./routes/category.route'));
-app.use('/api/languages', require('./routes/language.route'));
+app.use('/api/actors', authMDW, require('./routes/actor.route'));
+app.use('/api/countries', authMDW, require('./routes/country.route'));
+app.use('/api/cities', authMDW, require('./routes/city.route'));
+app.use('/api/categories', authMDW, require('./routes/category.route'));
+app.use('/api/languages', authMDW, require('./routes/language.route'));
 app.use('/api/users', require('./routes/user.route'));
 app.use('/api/auth', require('./routes/auth.route'));
 
