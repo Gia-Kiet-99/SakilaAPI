@@ -46,7 +46,7 @@ router.post("/refresh", authMDW, async (req, res) => {
   const user = await userModel.single(userId);
   if (!user || user.rfToken !== refreshToken) {
     return res.status(401).json({
-      error_message: "Invalid refresh token!"
+      error_message: "Refresh token is revoked!"
     })
   }
 
@@ -56,10 +56,10 @@ router.post("/refresh", authMDW, async (req, res) => {
   const opts = {
     expiresIn: 60 * 10
   }
-  const accessToken = jwt.sign(payload, process.env.SECRET_KEY, opts);
-  console.log(accessToken);
+  const newAccessToken = jwt.sign(payload, process.env.SECRET_KEY, opts);
+  // console.log(accessToken);
 
-  res.json({accessToken});
+  res.json({accessToken: newAccessToken});
 })
 
 module.exports = router;

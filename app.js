@@ -44,6 +44,8 @@ app.use(function (err, req, res, next) {
   res.status(500).json({ error_message: "Something broke!" })
 })
 
+require('./ws')
+
 const PORT = 3000;
 app.listen(PORT, function () {
   console.log(`Sakila api is running at http://localhost:${PORT}`);
