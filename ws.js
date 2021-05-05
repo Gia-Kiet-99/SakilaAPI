@@ -12,10 +12,22 @@ if (!socketServer) {
   socketServer.on('connection', (client) => {
     console.log("Client connects successfully!");
 
-    client.onmessage = function () {
-      
+    client.onmessage = function (message) {
+      console.log(message);
     }
   });
 
   console.log(`WebSocket server is running at port ${WS_PORT}`);
+}
+
+function broadcastAll(message) {
+  for (const client of socketServer.clients) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(message);
+    }
+  }
+}
+
+module.exports = {
+  broadcastAll
 }
